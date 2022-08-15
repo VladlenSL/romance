@@ -51,7 +51,7 @@ public class MaineTests extends BaseUI {
         driver.findElements(tap).get(4).click();
         //driver.findElement(nextButtonzero).click();
     }
-    By clickPW = By.xpath("//a[@class='nav-link'][text()='PRETTY WOMEN']");
+    By clickPW = By.cssSelector("a[href='https://romanceabroad.com/users/search']");
     By min = By.cssSelector("select[name='age_min']");
     By YEARS19 = By.cssSelector("option[value='20']");
     By max = By.cssSelector("select[name='age_max']");
