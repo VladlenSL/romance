@@ -19,8 +19,14 @@ public class MaineTests extends BaseUI {
     }
 
     @Test
-    public void testsIframe(){
+    public void testsIframe() {
         registrationForm.iframe();
         mainPage.clickplayyoutube();
+    }
+    public void testsFooter() {
+        //mainPage.mouseScroll(Locators.PHONE_LINK);
+        mainPage.jsScroll(Locators.PHONE_LINK);
+        //mainPage.jsScrollDawn();
+        mainPage.jsClick(Locators.PHONE_LINK);
     }
 }

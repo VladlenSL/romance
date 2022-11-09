@@ -2,6 +2,10 @@ import org.openqa.selenium.By;
 
 public class Locators {
 
+    //MainPage__
+    public static final By GALLERY_LINK = By.xpath("//a[@href = 'https://romanceabroad.com/users/search']");
+    public static final By PHONE_LINK = By.xpath("//a[@href = 'callto:18885997816']");
+
     //Registration__
 
     public static final By REGISTRATION_BUTTON = By.cssSelector("button[id='show-registration-block']");
@@ -36,5 +40,6 @@ public class Locators {
     public static final By YOUTUBE_FRAME_LOCATOR = By.xpath("//Iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By PLAY_YOUTUBE_BUTTON = By.xpath("//button[@aria-label='Смотреть']");
 
-
+   //GALLERY
+    public static final By SORT_DROP_DAWN = By.xpath("//select[contains(@id, 'sorter-select')]");
 }
