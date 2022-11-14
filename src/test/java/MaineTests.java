@@ -1,4 +1,10 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
+import java.util.List;
+
+import static java.awt.SystemColor.text;
 
 public class MaineTests extends BaseUI {
 
@@ -29,4 +35,18 @@ public class MaineTests extends BaseUI {
         //mainPage.jsScrollDawn();
         mainPage.jsClick(Locators.PHONE_LINK);
     }
+
+   @Test
+   public void testMainTabs() {
+        List<WebElement> tabs = driver.findElements(Locators.TAB_LINKS);
+       for (int i = 1; i < tabs.size(); i++) {
+           if(tabs.get(i).isDisplayed()) {
+               String text = tabs.get(i).getText();
+               tabs.get(i).click();
+               System.out.println(text);
+               driver.navigate().back();
+               tabs = driver.findElements(Locators.TAB_LINKS);
+           }
+       }
+   }
 }

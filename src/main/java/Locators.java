@@ -42,4 +42,5 @@ public class Locators {
 
    //GALLERY
     public static final By SORT_DROP_DAWN = By.xpath("//select[contains(@id, 'sorter-select')]");
+    public static final By TAB_LINKS = By.xpath("//a[contains(@class , 'nav-link')]");
 }
